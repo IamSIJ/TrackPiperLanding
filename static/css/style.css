@@ -24,6 +24,10 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 body {
@@ -109,6 +113,7 @@ header {
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s;
+    text-decoration: none;
 }
 
 .cta-button:hover {
