@@ -6,6 +6,7 @@
     <title>Track Piper - Advanced Package Tracking</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -22,42 +23,44 @@
     </nav>
 
     <header>
-        <div class="hero">
-            <h1>STOP GUESSING. TRACK WITH VALIDITY.</h1>
-            <p>Advanced tracking solutions for modern businesses</p>
-            <a href="https://app.trackpiper.com/register" class="cta-button">Get Started</a>
+        <div class="particles-container"></div>
+        <div class="hero" data-aos="fade-up">
+            <div class="neon-border">
+                <h1><span class="gradient-text">STOP GUESSING.</span><br>TRACK WITH <span class="glow-text underline">VALIDITY</span>.</h1>
+                <a href="https://app.trackpiper.com/register" class="cta-button">Get Started</a>
+            </div>
         </div>
     </header>
 
     <section id="pricing">
-        <h2>Simple, Transparent Pricing</h2>
+        <h2 data-aos="fade-up">Simple, <span class="gradient-text">Transparent</span> Pricing</h2>
         <div class="pricing-grid">
-            <div class="price-card">
+            <div class="price-card" data-aos="fade-up" data-aos-delay="100">
                 <h3>Starter</h3>
                 <div class="price">£2.99</div>
                 <div class="credits">10 Credits</div>
                 <p>Perfect to get started</p>
             </div>
-            <div class="price-card">
+            <div class="price-card" data-aos="fade-up" data-aos-delay="200">
                 <h3>Basic</h3>
                 <div class="price">£19.99</div>
                 <div class="credits">80 Credits</div>
                 <p>Save 15% on credits</p>
             </div>
-            <div class="price-card recommended">
+            <div class="price-card recommended" data-aos="fade-up" data-aos-delay="300">
                 <div class="recommended-label">MOST RECOMMENDED</div>
                 <h3>Popular</h3>
                 <div class="price">£49.99</div>
                 <div class="credits">200 Credits</div>
                 <p>Save 20% on credits</p>
             </div>
-            <div class="price-card">
+            <div class="price-card" data-aos="fade-up" data-aos-delay="400">
                 <h3>Pro</h3>
                 <div class="price">£79.99</div>
                 <div class="credits">350 Credits</div>
                 <p>Save 30% on credits</p>
             </div>
-            <div class="price-card">
+            <div class="price-card" data-aos="fade-up" data-aos-delay="500">
                 <h3>Business</h3>
                 <div class="price">£149.99</div>
                 <div class="credits">750 Credits</div>
@@ -66,17 +69,31 @@
         </div>
         <div class="pricing-benefits">
             <div class="benefit-item highlight">
-                <div class="benefit-icon">♾️</div>
+                <div class="benefit-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+                        <path d="M2 17L12 22L22 17" />
+                        <path d="M2 12L12 17L22 12" />
+                    </svg>
+                </div>
                 <h3>No Expiration Date</h3>
-                <p>Your credits stay valid forever.<br>No pressure to use them quickly.</p>
+                <p>Credits stay valid forever<br><span class="highlight-text">Use them at your own pace</span></p>
             </div>
             <div class="benefit-item highlight">
-                <div class="benefit-icon">💰</div>
-                <h3>Bulk Savings</h3>
-                <p>Save up to 50% with bulk purchases.<br>The more you buy, the more you save.</p>
+                <div class="benefit-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1V23" />
+                        <path d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6" />
+                    </svg>
+                </div>
+                <h3>Smart Bulk Savings</h3>
+                <p>Up to 40% Savings<br><span class="highlight-text">Maximum value for your investment</span></p>
             </div>
         </div>
     </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="{{ url_for('static', filename='js/particles.js') }}"></script>
     <script src="{{ url_for('static', filename='js/security.js') }}"></script>
 </body>
 </html>
