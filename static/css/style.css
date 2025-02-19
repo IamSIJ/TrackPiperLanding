@@ -1,0 +1,244 @@
+:root {
+    --primary-color: var(--dark-bg);
+    --secondary-color: var(--dark-card);
+    --accent-color: var(--blue-accent);
+    --text-color: var(--text-light);
+    --dark-bg: #121212;
+    --dark-card: #1e1e1e;
+    --dark-border: #2e2e2e;
+    --blue-accent: rgb(56, 182, 255);
+    --blue-hover: rgba(56, 182, 255, 0.8);
+    --text-light: #e0f3ff;
+    --danger-color: #dc3545;
+    --error-text: #f8d7da;
+    --gray-accent: #6c757d;
+    --gray-hover: #5a6268;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--secondary-color);
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.auth-buttons {
+    display: inline-flex;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+
+.login-btn, .register-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.login-btn {
+    color: var(--blue-accent);
+    border: 1px solid var(--blue-accent);
+}
+
+.register-btn {
+    background-color: var(--blue-accent);
+    color: var(--dark-bg);
+}
+
+.register-btn:hover, .cta-button:hover {
+    background-color: var(--blue-hover);
+}
+
+header {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--blue-accent);
+    color: var(--dark-bg);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+#features {
+    padding: 5rem 10%;
+    background-color: var(--secondary-color);
+}
+
+#features h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feature-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+#pricing {
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.price-card {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease-out;
+    border: 1px solid var(--dark-border);
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+}
+
+.price-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.credits {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.pricing-note {
+    margin-top: 2rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.pricing-note p {
+    margin: 0.5rem 0;
+}
+
+.pricing-benefits {
+    margin-top: 4rem;
+    padding: 3rem;
+    background: linear-gradient(to right, var(--dark-card), var(--dark-bg));
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    flex-wrap: wrap;
+    border: 1px solid var(--blue-accent);
+}
+
+.benefit-item {
+    text-align: center;
+    max-width: 300px;
+}
+
+.benefit-item h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.benefit-item.highlight {
+    text-align: center;
+    max-width: 300px;
+    padding: 2rem;
+    background-color: rgba(100, 255, 218, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s;
+    border: 1px solid var(--dark-border);
+}
+
+.benefit-item.highlight:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
