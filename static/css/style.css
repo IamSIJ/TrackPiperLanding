@@ -71,11 +71,21 @@ nav {
     bottom: -5px;
     left: 0;
     background-color: var(--blue-accent);
-    transition: width 0.3s;
+    transition: width 0.3s ease;
+    transform-origin: left;
 }
 
 .nav-links a:hover::after {
     width: 100%;
+    left: 0;
+    transform-origin: left;
+}
+
+.nav-links a:not(:hover)::after {
+    width: 0;
+    left: auto;
+    right: 0;
+    transform-origin: right;
 }
 
 .nav-links a:hover {
@@ -468,4 +478,71 @@ header::before {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--secondary-color);
+    padding: 1.5rem 2.5%;
+    text-align: center;
+    border-top: 1px solid var(--dark-border);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;  /* reduced from 2rem */
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;  /* reduced from 1rem 0 */
+}
+
+.footer-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-contact {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;  /* reduced from 1rem */
+}
+
+.footer-contact a {
+    color: var(--text-color);  /* changed from default blue */
+    text-decoration: none;  /* removes underline */
+}
+
+.footer-legal {
+    font-size: 0.9rem;
+    color: var(--gray-accent);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.copyright {
+    margin-top: 1rem;  /* reduced from 2rem */
+    color: var(--gray-accent);
+    font-size: 0.9rem;
 }
